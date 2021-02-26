@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+}
+
+.header ul {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.header ul li {
+    padding: 5px 10px;
+}
+
+.background_splash_img {
+    width: 100%;
+    height: 100%;
+}
