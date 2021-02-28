@@ -1,29 +1,194 @@
+/* ff815a */
+
 * {
-    margin: 0;
+    font-family: 'Roboto', sans-serif;
     padding: 0;
+    margin: 0
+}
+
+:root {
+    --blue: #00a2e8;
+    --white: #ffffff;
+}
+
+.logo {
+    width: 50px;
+}
+
+.main_logo {
+    width: 80%;
+}
+
+.container {
+    z-index: -100;
+    top: 0;
+    position: absolute;
+    width: 100%;
 }
 
 .header {
+    z-index: 50;
+    /* es sticky igual */
+    position: fixed;
+    top: 0;
+    display: flex;
     width: 100%;
-    height: 50px;
-    background-color: red;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header>div {
+    padding-right: 40%;
+    padding-top: 1%;
+}
+
+.header_color {
+    transition: .5s;
+    background-color: var(--blue);
+}
+
+.header_transparent {
+    transition: .5s;
+    background-color: transparent;
+}
+
+.icon {
+    width: 25px;
+    color: white;
+    /* background-color: white; */
+    fill: white;
+}
+
+.inactive {
+    display: none;
+}
+
+.welcome_screen {
+    width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.header ul {
-    display: flex;
-    list-style: none;
-    text-decoration: none;
-    align-items: center;
-    /* justify-content: center; */
+.vertical_background {
+    /* background: url("../img/vertical\ banner.jpg"); */
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/vertical\ banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-size: auto; */
 }
 
-.header ul li {
-    padding: 5px 10px;
+.horizontal_background {
+    background: url("../img/splash_screen.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-size: auto; */
 }
 
-.background_splash_img {
+.splash_img {
+    z-index: -100;
+    width: 100%;
+    filter: blur(3px);
+}
+
+.welcome_text {
+    font-family: Arial, Helvetica, sans-serif;
+    /* position: absolute; */
+    color: white;
+    text-align: center;
+    text-shadow: 0px 8px 8px black;
+}
+
+.welcome_text h1 {
+    font-size: 4rem;
+    padding-bottom: 50px;
+}
+
+.news_screen {
+    height: 700px;
+    background-color: teal;
+}
+
+.navbar_links {
+    color: white;
+    display: block;
+    top: 50px;
+    position: fixed;
+    background-color: blue;
     width: 100%;
     height: 100%;
+    list-style: none;
+}
+
+.shown {
+    transition: 1s;
+    right: 0;
+}
+
+.not_shown {
+    transition: 1s;
+    right: -500px;
+}
+
+@media screen and (min-width: 660px) {}
+
+@media screen and (min-width: 1024px) {
+    .vertical_background {
+        /* background: url("../img/vertical\ banner.jpg"); */
+        /* background: url("../img/splash_screen.png"); */
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/splash_screen.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .navbar_links {
+        display: flex;
+        position: unset;
+        background-color: transparent;
+    }
+    .navbar_links li {
+        width: 100%;
+        margin: 0 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar_links li button {
+        font-weight: bold;
+        width: 100%;
+        /* height: 50px; */
+        border: none;
+        color: white;
+        background-color: transparent;
+        font-size: 1.3rem;
+        text-align: center;
+        margin: 2% 12%;
+        /* width: 50%; */
+        padding: 8% 10%;
+        border-radius: 4px;
+        box-sizing: content-box;
+    }
+    .navbar_links li button:hover {
+        transition: .5s;
+        background-color: gray;
+        /* border: 1px solid grey; */
+    }
+    .nav_icon {
+        display: none;
+    }
+    .navbar {
+        width: 50%;
+    }
+    .logo {
+        width: 75px;
+    }
+    .main_logo {
+        width: 90%;
+    }
+    .header>div {
+        padding-right: 25%;
+        /* padding-top: 1%; */
+    }
 }
