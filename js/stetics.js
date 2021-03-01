@@ -9,6 +9,17 @@ window.onscroll = () => ChangeHeaderState();
 
 
 
+let dropdowns = document.querySelectorAll(".dropdown_list");
+
+dropdowns.forEach(list => {
+    list.addEventListener("click", () => {
+        let desplegable = list.querySelector("ul");
+        desplegable.classList.toggle("list_hidden");
+        desplegable.classList.toggle("list_display");
+    });
+});
+
+
 
 
 
@@ -26,8 +37,8 @@ function showAside() {
     //me da el ul
     let aside = nav.childNodes[3];
 
-    aside.classList.toggle("not_shown");
-    aside.classList.toggle("shown");
+    aside.classList.toggle("aside_not_shown");
+    aside.classList.toggle("aside_shown");
 }
 
 

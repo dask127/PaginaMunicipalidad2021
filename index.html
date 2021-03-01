@@ -20,22 +20,28 @@
 
             <div class="icon_container nav_icon" id="navbar_shower">
                 <svg viewBox="0 160.51 595.281 520.871" class="icon">
-                    <path d="M21.26,256.18h552.761c11.742,0,21.26-9.519,21.26-21.261V181.77c0-11.742-9.518-21.261-21.26-21.261H21.26
+                    <path
+                        d="M21.26,256.18h552.761c11.742,0,21.26-9.519,21.26-21.261V181.77c0-11.742-9.518-21.261-21.26-21.261H21.26
 	                C9.518,160.51,0,170.028,0,181.77v53.149C0,246.662,9.518,256.18,21.26,256.18z M21.26,468.78h552.761
 	                c11.742,0,21.26-9.518,21.26-21.26v-53.15c0-11.742-9.518-21.26-21.26-21.26H21.26C9.518,373.11,0,382.628,0,394.37v53.15
 	                C0,459.262,9.518,468.78,21.26,468.78z M21.26,681.381h552.761c11.742,0,21.26-9.518,21.26-21.26v-53.15
-	                c0-11.742-9.518-21.26-21.26-21.26H21.26C9.518,585.711,0,595.228,0,606.97v53.15C0,671.863,9.518,681.381,21.26,681.381z"></path>
+	                c0-11.742-9.518-21.26-21.26-21.26H21.26C9.518,585.711,0,595.228,0,606.97v53.15C0,671.863,9.518,681.381,21.26,681.381z">
+                    </path>
                 </svg>
             </div>
 
-            <ul class="navbar_links not_shown">
-                <li>
+            <ul class="navbar_links aside_not_shown">
+                <li class="dropdown_list">
                     <button>Turismo</button>
+                    <ul class="list_hidden">
+                        <li>cosa1</li>
+                        <li>cosa2</li>
+                    </ul>
                 </li>
-                <li>
+                <li class="">
                     <button>Cultura</button>
                 </li>
-                <li>
+                <li class="">
                     <button>Economía</button>
                 </li>
                 <li>
@@ -60,11 +66,54 @@
                 <!-- <h2>Lugar Soñado</h2> -->
             </div>
         </div>
+
         <div class="news_screen">
+            <h3>Noticias</h3>
+            <section class="news_wrapper">
+                <div class="slideshow_container">
+
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png" class="slideshow_image">
+                        <!-- <div class="text">Caption One</div> -->
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" class="slideshow_image">
+                        <!-- <div class="text">Caption Two</div> -->
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="https://www.w3schools.com/w3css/img_lights.jpg" class="slideshow_image">
+                        <!-- <div class="text">Caption Three</div> -->
+                    </div>
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev">&#10094;</a>
+                    <a class="next">&#10095;</a>
+
+                    <!-- The dots/circles -->
+                    <!-- <div class="dot_container">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div> -->
+                </div>
+                <div class="news_row">
+                    <img src="img/recent_1.jpg" class="news_image">
+                    <img src="img/recent_2.jpg" class="news_image">
+                </div>
+            </section>
+
+
 
         </div>
     </div>
 
+    <script src="js/slideshow.js"></script>
     <script src="js/stetics.js"></script>
 </body>
 
